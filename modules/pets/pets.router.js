@@ -9,13 +9,13 @@ const router = express.Router()
 router.get('/cats', (req, res) => {
   // Return all pets currently up for adoption.
   const { nextCat } = Pets.get()
-  return res.status(200).json({ nextCat })
+  return res.status(200).json(nextCat)
 })
 
 router.get('/dogs', (req, res) => {
   // Return all pets currently up for adoption.
   const { nextDog } = Pets.get();
-  return res.status(200).json({ nextDog })
+  return res.status(200).json(nextDog)
 })
 
 router.delete('/api/cat', json, (req, res) => {
